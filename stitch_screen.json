@@ -1,0 +1,28 @@
+{
+  "id": 5,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\"name\":\"projects/9896018699169561182/screens/dbdb5eb149ce47259bd91aec9a20fdf8\",\"title\":\"Punto Centro Fitness - Landing Page\",\"screenshot\":{\"name\":\"projects/9896018699169561182/files/e19300eeca204d06b6fc104f3456bb29\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/ADBb0uh1euiCJsq5vv0Jbiahgr27rOz5KJvnzO3L1RtU-1zke5kv4q-I2nUTBW6p5NDjNrI61fiusqrKAcLWfPOmwNnGK-wZEfVrUBP7oPQ8qhe2lKdNdZ5icJF6joDGv1UPAENvA05rZVAqKjMxwrahYB_423oUnENtX8DzO-C4h-_MUU-bP7ktUwGZJBP0M1-EfYxcKo_EP1UYbgXwp7Yz-kpRZ7yawAgoTZddvZFJ10IQrM7hWWLwSnD6GbQ\"},\"htmlCode\":{\"name\":\"projects/9896018699169561182/files/49c91cf4403547f385fd006ca6727c65\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2FmMzRhYTEyZmJmMjQ0NzE4NjM2NWRmYTNjM2EwOTkxEgsSBxCFuY3R_wIYAZIBIwoKcHJvamVjdF9pZBIVQhM5ODk2MDE4Njk5MTY5NTYxMTgy&filename=&opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"2560\",\"height\":\"8980\",\"deviceType\":\"DESKTOP\"}",
+        "type": "text"
+      }
+    ],
+    "structuredContent": {
+      "deviceType": "DESKTOP",
+      "height": "8980",
+      "htmlCode": {
+        "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2FmMzRhYTEyZmJmMjQ0NzE4NjM2NWRmYTNjM2EwOTkxEgsSBxCFuY3R_wIYAZIBIwoKcHJvamVjdF9pZBIVQhM5ODk2MDE4Njk5MTY5NTYxMTgy&filename=&opi=89354086",
+        "mimeType": "text/html",
+        "name": "projects/9896018699169561182/files/49c91cf4403547f385fd006ca6727c65"
+      },
+      "name": "projects/9896018699169561182/screens/dbdb5eb149ce47259bd91aec9a20fdf8",
+      "screenshot": {
+        "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uh1euiCJsq5vv0Jbiahgr27rOz5KJvnzO3L1RtU-1zke5kv4q-I2nUTBW6p5NDjNrI61fiusqrKAcLWfPOmwNnGK-wZEfVrUBP7oPQ8qhe2lKdNdZ5icJF6joDGv1UPAENvA05rZVAqKjMxwrahYB_423oUnENtX8DzO-C4h-_MUU-bP7ktUwGZJBP0M1-EfYxcKo_EP1UYbgXwp7Yz-kpRZ7yawAgoTZddvZFJ10IQrM7hWWLwSnD6GbQ",
+        "name": "projects/9896018699169561182/files/e19300eeca204d06b6fc104f3456bb29"
+      },
+      "title": "Punto Centro Fitness - Landing Page",
+      "width": "2560"
+    }
+  }
+}

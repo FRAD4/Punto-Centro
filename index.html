@@ -1,0 +1,333 @@
+Quiz<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Punto Centro Fitness — Potenciando tu mejor versión</title>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Tailwind Config -->
+  <script src="js/tailwind-config.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Geist:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"/>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- ====== NAVBAR ====== -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant">
+    <div class="flex justify-between items-center max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-4">
+      <a href="#" class="font-headline-md text-headline-md font-bold text-primary uppercase tracking-tighter">
+        Punto Centro Fitness
+      </a>
+
+      <!-- Desktop nav -->
+      <div id="desktop-menu" class="hidden md:flex gap-8 items-center">
+        <a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#sedes">Sedes</a>
+        <a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#servicios">Clases</a>
+        <a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#contacto">Contacto</a>
+        <button class="bg-primary text-on-primary-fixed px-6 py-2 font-bold uppercase hover:scale-95 transition-all duration-100">
+          Inscribirme
+        </button>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-toggle" class="md:hidden text-primary cursor-pointer p-2" aria-label="Abrir menú">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile menu drawer -->
+    <div id="mobile-menu" class="md:hidden hidden bg-surface-container-lowest border-t border-outline-variant">
+      <div class="flex flex-col gap-4 px-margin-mobile py-6">
+        <a class="font-body-lg text-body-lg text-on-surface hover:text-primary transition-colors" href="#sedes">Sedes</a>
+        <a class="font-body-lg text-body-lg text-on-surface hover:text-primary transition-colors" href="#servicios">Clases</a>
+        <a class="font-body-lg text-body-lg text-on-surface hover:text-primary transition-colors" href="#contacto">Contacto</a>
+        <button class="bg-primary text-on-primary-fixed px-6 py-3 font-bold uppercase w-full mt-2">
+          Inscribirme
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <header class="relative min-h-screen flex items-center pt-20" id="inicio">
+    <div class="absolute inset-0 z-0">
+      <img class="w-full h-full object-cover grayscale-[0.3]"
+           src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIdnvtXymx3wbxBz7L1Xg8nAg7XHtLb4zAE0gfWhUb1CaAans6YJM0ltJr3pMoGMtoEJ_hvcnQrDpoinC526bx3eWZocAjXzYveGBLagqQ-yZtU5PH2HnC_LZzm9m-KJL9GHAva1eUUJs1Ov3MRUWbwZthQ-J6xTYlKm5knsB7nLEYf2Npsc_17wB6nPlMgFXJ-MA75gG2O9Cxo9tRzWVLzNA4wBdW-elnNHKhDeXNLPKR27K79mEHjW_to57VunUpFbjrXtQt5ls"
+           alt="Personas entrenando en un gimnasio industrial con luces azules y negras"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop w-full">
+      <div class="max-w-2xl">
+        <span class="font-label-caps text-label-caps text-primary tracking-[0.2em] mb-4 block">
+          POTENCIANDO TU MEJOR VERSIÓN
+        </span>
+        <h1 class="font-display-lg text-display-lg uppercase mb-6 leading-tight">
+          Entrená en tu <span class="text-primary">mejor versión</span>
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+          Elegí tu sede y empezá hoy. Equipamiento de última generación, entrenadores certificados y el mejor ambiente para alcanzar tus metas.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4">
+          <a href="#sedes" class="inline-block bg-primary text-on-primary-fixed px-8 py-4 font-bold uppercase tracking-wider hover:bg-primary-fixed-dim transition-colors text-center">
+            Ver sede Fray Bentos
+          </a>
+          <a href="#sedes" class="inline-block bg-transparent border border-on-surface text-on-surface px-8 py-4 font-bold uppercase tracking-wider hover:bg-on-surface hover:text-background transition-colors text-center">
+            Ver sede Mercedes
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== SEDES ====== -->
+  <section class="py-24 bg-surface" id="sedes">
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+      <h2 class="font-headline-lg text-headline-lg uppercase mb-4 text-center">Nuestras <span class="text-primary">Sedes</span></h2>
+      <p class="text-on-surface-variant text-center mb-16 max-w-lg mx-auto">Dos ubicaciones pensadas para acercarte el mejor entrenamiento sin importar dónde estés.</p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Fray Bentos -->
+        <div class="tonal-layer-1 sharp-outline group overflow-hidden">
+          <div class="h-80 overflow-hidden relative">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBexPswqM_ocnCObYv2sZbCmbqbpcKihea3TNhBW9gKsM3qARHhoFIQZSi8HMsCl0pUppyOO6F1-XQwjvGbth8HSb6Rpv4mroGybI73vLI_suKl_-wPRlzb5fozip14HnAHWpLOPqSdUrDBgj5zvijbrlkN8gAV0gOTbuawWlMJokRpyCT18u99eJgmBnt6uVop-HFyMkNsggYjiRmcJMC5U5qVhUOV4ly_wCSYsYfJNtCZyzq4afRFdT7Iufx-z2U6udikqbWasXc"
+                 alt="Sede central de Punto Centro Fitness en Fray Bentos con equipamiento moderno"/>
+            <div class="absolute top-4 left-4 bg-primary text-on-primary-fixed px-4 py-1 font-bold uppercase text-xs">Sede Central</div>
+          </div>
+          <div class="p-8">
+            <h3 class="font-headline-md text-headline-md uppercase mb-2">Fray Bentos</h3>
+            <p class="font-body-md text-on-surface-variant mb-6">Nuestra sede principal equipada con lo último en biomecánica y espacios amplios para tu comodidad.</p>
+            <div class="flex items-center gap-2 mb-8 text-on-surface-variant font-label-caps uppercase">
+              <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+              Av. 18 de Julio 1234, Fray Bentos
+            </div>
+            <button class="w-full border border-outline-variant py-4 font-bold uppercase tracking-widest hover:border-primary hover:text-primary transition-all">Ver más</button>
+          </div>
+        </div>
+        <!-- Mercedes -->
+        <div class="tonal-layer-1 sharp-outline group overflow-hidden">
+          <div class="h-80 overflow-hidden relative">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDujNXHELkF0fMETvvux4SwK_uEBRv5Iq7oejXQUS5lDSMHUrAer6YBT6K8dXCsmjpvcPwnZt7uT37GV5zJXWVDtkNeCsN4Tr7VrDZOdAuJDitOgwMBCajFM38jZvYVtusuOt1_l9UYGAdjOT9MRvO_89Jkbl7tkL9JzjScOyrbK5sa4RvCIpQSmkAE5S5U535uNwhtk_nTS6UqAnWsR5AQF1tucFXqdsF6c9B2MrTTWUTwYFSgyzW4wd4QNi4TL71X6ASBmKzVFH0"
+                 alt="Sede de Punto Centro Fitness en Mercedes con zona de entrenamiento funcional"/>
+          </div>
+          <div class="p-8">
+            <h3 class="font-headline-md text-headline-md uppercase mb-2">Mercedes</h3>
+            <p class="font-body-md text-on-surface-variant mb-6">Ubicada estratégicamente, Mercedes ofrece una experiencia boutique enfocada en resultados y comunidad.</p>
+            <div class="flex items-center gap-2 mb-8 text-on-surface-variant font-label-caps uppercase">
+              <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+              Calle Artigas 567, Mercedes
+            </div>
+            <button class="w-full border border-outline-variant py-4 font-bold uppercase tracking-widest hover:border-primary hover:text-primary transition-all">Ver más</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SERVICIOS ====== -->
+  <section class="py-24 bg-surface-container-lowest relative overflow-hidden" id="servicios">
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/2"></div>
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+      <h2 class="font-headline-lg text-headline-lg uppercase mb-16 text-center">Nuestros <span class="text-primary">Servicios</span></h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 mb-6 flex items-center justify-center border border-primary text-primary">
+            <span class="material-symbols-outlined text-4xl">fitness_center</span>
+          </div>
+          <h4 class="font-headline-md text-headline-md uppercase mb-4">Musculación</h4>
+          <p class="text-on-surface-variant leading-relaxed">Equipamiento de primer nivel para hipertrofia, fuerza y mantenimiento físico en un entorno profesional.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 mb-6 flex items-center justify-center border border-primary text-primary">
+            <span class="material-symbols-outlined text-4xl">groups</span>
+          </div>
+          <h4 class="font-headline-md text-headline-md uppercase mb-4">Clases funcionales</h4>
+          <p class="text-on-surface-variant leading-relaxed">Dinámicas grupales de alta intensidad diseñadas para mejorar tu movilidad, resistencia y agilidad.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 mb-6 flex items-center justify-center border border-primary text-primary">
+            <span class="material-symbols-outlined text-4xl">monitoring</span>
+          </div>
+          <h4 class="font-headline-md text-headline-md uppercase mb-4">Personalizado</h4>
+          <p class="text-on-surface-variant leading-relaxed">Planes a medida con seguimiento constante para maximizar tu progreso y asegurar la técnica correcta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== GALERÍA MERCEDES ====== -->
+  <section class="py-24 bg-surface" id="galeria">
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="flex flex-col lg:flex-row gap-16">
+        <div class="lg:w-1/3">
+          <h2 class="font-headline-lg text-headline-lg uppercase mb-4">Sede <span class="text-primary">Mercedes</span></h2>
+          <p class="text-on-surface-variant mb-8">Ubicada en el corazón de la ciudad, diseñada para quienes buscan eficiencia y modernidad en cada entrenamiento.</p>
+          <div class="tonal-layer-1 sharp-outline p-6">
+            <h5 class="font-label-caps text-label-caps text-primary uppercase mb-6 tracking-widest">Horarios de Clases</h5>
+            <ul class="space-y-4 font-body-md">
+              <li class="flex justify-between border-b border-outline-variant pb-2">
+                <span>HIIT Training</span>
+                <span class="text-primary">08:00 - 09:00</span>
+              </li>
+              <li class="flex justify-between border-b border-outline-variant pb-2">
+                <span>Functional Core</span>
+                <span class="text-primary">12:30 - 13:30</span>
+              </li>
+              <li class="flex justify-between border-b border-outline-variant pb-2">
+                <span>Power Lifting</span>
+                <span class="text-primary">18:00 - 19:30</span>
+              </li>
+              <li class="flex justify-between border-b border-outline-variant pb-2">
+                <span>Yoga Recovery</span>
+                <span class="text-primary">20:00 - 21:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="lg:w-2/3 grid grid-cols-2 grid-rows-2 gap-4 h-[600px]">
+          <div class="col-span-1 row-span-2 overflow-hidden">
+            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOI1PNLTC1aM-jRvnbcSCVzksjsvLmV1wg4TpHyRRIkDl4e8Vo2g4fLLrQHFWetrOcSU2Xdw2LSSqie906uqluaXr5CmJ4B0S4vn4IWgDHK9NTGKmH3GsHB6Yv2LgOj2GWRIiQFnOS5HBHeNID_yxLYRP-LyWd34tq_axosc-asMwzXIgWJPPl4aryYnP1E-qDApF6QZxoQTtFY0Sn0skvGPKhwwuJJSRWITG5KNGAesuQeWM-c6YNoqsn_I7TBVCiTdgxFngPSq4"
+                 alt="Zona de cardio en Punto Centro Fitness Mercedes con cintas y remos modernos"/>
+          </div>
+          <div class="col-span-1 row-span-1 overflow-hidden">
+            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuB00L8lDC1n7MNhk7LQCT0hNMfiRBvl4rqtjcOtMKsrdErfCagW1l5YfBWpPY8fBJkXM3ZIjXa3X3qRpD6W2kbdi4fWC3xMUSuo9dPImbW-Hkgg4kdamCeG2Z_Tqiz8HD3l2ivkJ9DK1fv-VPKjooPPyf0LZgyassENXaKe8mjprGFA085_tPAQuE2IE-tBorHJ0CG3KlcKXX9w0RgkcJbWkoUtEApUiGOVnCe8aaddxP26Y8DGxHs2FA6SkV3dqP7NQ7gi9QG6igY"
+                 alt="Pesas y mancuernas en rack de gimnasio con iluminación azul"/>
+          </div>
+          <div class="col-span-1 row-span-1 overflow-hidden">
+            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuClYoFEc9ufbUXy8rLlSrWHLV0jxcOWnxpiMlwZMjRpajqhIqLyIiu0h2WD_hjlWUvJ8FcmPEgWmXgsLqxxKpdGEZIUeYVc_6S-6vxKZlr9ND9x_JOrWFwCNEq71mjPhaApgFalyjVpLgkZSKSTS7IcMaGfYPZ5UuKLDS52j6Ggl-XeAeqatyiT2jIns9OZuZFKamIIL5a3nnUjC3llYaGC4iSSjSSBMEZRWQONP2WQzQbteGgEDEBdP-6bCrjr5HG3LC1jJz_FYmw"
+                 alt="Vestuarios y área de bienestar con diseño minimalista oscuro"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIOS ====== -->
+  <section class="py-24 bg-surface-container-low" id="testimonios">
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="text-center mb-16">
+        <h2 class="font-headline-lg text-headline-lg uppercase mb-4">Comunidad <span class="text-primary">Punto Centro</span></h2>
+        <p class="text-on-surface-variant">Lo que dicen nuestros miembros sobre su proceso de transformación.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="tonal-layer-1 p-8 border-l-4 border-primary">
+          <div class="flex gap-1 text-tertiary-fixed-dim mb-4">
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+          </div>
+          <p class="italic mb-8 text-on-surface">"Las instalaciones son increíbles y el ambiente te motiva a darlo todo cada día. Los profes de Mercedes son excelentes."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-surface-container-highest rounded-full overflow-hidden flex-shrink-0">
+              <img class="w-full h-full object-cover"
+                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYRnEQOoMMZoNhJD4fUW-vqPrJ8H4RMECxc4du1uyzjFKBRsDGKeh8jzQmc9HwbaE1qXNtWycbdQTUTixOOmnt82BX-3ZipL__AWFm9XQuExDQUR4_wxs7S6zPF4atpPLT1HEtxiCFGBG8qAgY1p3ojyyl_t3RhTTU8feC2IXArYYfbsPgirq2Jnai1lSK-QtnsTAK08hLmMQSjo0LbOYRuzKYYBjGQgp5ERpNmXjAu1Yp0L77YOmVF3Wvx7gq2ESDwNauOzI7v4Y"
+                   alt="Carla Mendez, miembro de Punto Centro Fitness"/>
+            </div>
+            <div>
+              <div class="font-bold uppercase text-sm">Carla Mendez</div>
+              <div class="text-xs text-on-surface-variant font-label-caps">Miembro Sede Mercedes</div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="tonal-layer-1 p-8 border-l-4 border-primary">
+          <div class="flex gap-1 text-tertiary-fixed-dim mb-4">
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+          </div>
+          <p class="italic mb-8 text-on-surface">"En Fray Bentos encontré el espacio perfecto para mi entrenamiento de fuerza. Equipamiento de primer nivel."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-surface-container-highest rounded-full overflow-hidden flex-shrink-0">
+              <img class="w-full h-full object-cover"
+                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIducaT39aacbFUDmQ4BBkYSCyPlraYncEgQ2wA9QlJstJk1eAjiLp1ZbPIK-WG5019A5KZJOAA8zLdLCBB6OHe7zMzL2FRRYz7Umjlje9RAVyIlx9xm8ybi16ej1sL-LHkd5AyPApY4vVJmkkpoNWY-6SNk9vjzX10I9R-giVJBF_nlUCFXmaqmhtyKo-pNldIti5JIWjoIq50sf5ZKoUX1cxPWa2vaOIgPiFgGsNtv8mQ1eMgmznRcRYQzefDp4aTRL89M3xLqA"
+                   alt="Ricardo Sosa, miembro de Punto Centro Fitness"/>
+            </div>
+            <div>
+              <div class="font-bold uppercase text-sm">Ricardo Sosa</div>
+              <div class="text-xs text-on-surface-variant font-label-caps">Miembro Sede Fray Bentos</div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="tonal-layer-1 p-8 border-l-4 border-primary">
+          <div class="flex gap-1 text-tertiary-fixed-dim mb-4">
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+            <span class="material-symbols-outlined text-sm fill-star">star</span>
+          </div>
+          <p class="italic mb-8 text-on-surface">"Lo mejor de Punto Centro es la comunidad. Me ayudaron a bajar 10kg en 4 meses con el plan personalizado."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-surface-container-highest rounded-full overflow-hidden flex-shrink-0">
+              <img class="w-full h-full object-cover"
+                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm4APu7TTBuAgfdLOHDdbZjaVzDFrB9DXS0CzdE5ETQqMYM6sLRJmbCAnypw2kLz_uIOS4OXxbiUH2oMkQoNtQzCz6cWfHmaBBA6o69tlBDyoBlyGZN805Zc3tdNmQfT6iiTXnR4wAaqC_Buqrtt2nf-QN3rvhP5Qectff_ocHDFgFs3q_jR87Q0oQ34v5nFEJGv5P2CbooLIook188P_vR7Sc5sc6su3YT5zg0i-f9Lk9cHOuBKhphE16tRdg2OXcFJT0HvmwOR4"
+                   alt="Mariana Ruiz, miembro de Punto Centro Fitness"/>
+            </div>
+            <div>
+              <div class="font-bold uppercase text-sm">Mariana Ruiz</div>
+              <div class="text-xs text-on-surface-variant font-label-caps">Entrenamiento Personalizado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA FINAL ====== -->
+  <section class="py-24 relative overflow-hidden" id="contacto">
+    <div class="absolute inset-0 bg-primary-container/10"></div>
+    <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/20 blur-[100px] rounded-full"></div>
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
+      <h2 class="font-display-lg text-display-lg uppercase mb-8">
+        Sumate hoy a <br/><span class="text-primary">Punto Centro</span>
+      </h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl mx-auto">
+        No esperes al lunes. Tu transformación empieza con el primer paso hoy mismo en cualquiera de nuestras sedes.
+      </p>
+      <button class="bg-primary text-on-primary-fixed px-12 py-5 font-extrabold uppercase tracking-[0.2em] text-lg hover:scale-105 transition-transform">
+        Empezar ahora
+      </button>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="w-full border-t border-outline-variant bg-surface-container-lowest">
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="font-headline-md text-headline-md font-bold text-primary uppercase">
+        Punto Centro Fitness
+      </div>
+      <div class="flex flex-wrap justify-center gap-8 font-body-md text-body-md">
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="#sedes">Sedes</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="#servicios">Clases</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="#contacto">Contacto</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidad</a>
+      </div>
+      <div class="text-on-surface-variant font-body-md text-sm text-center md:text-right">
+        © 2025 Punto Centro Fitness. Potenciando tu mejor versión.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

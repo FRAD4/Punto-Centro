@@ -1,0 +1,129 @@
+/* ====== Punto Centro Fitness — Custom Styles ====== */
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #131313;
+  color: #e5e2e1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Material Symbols base */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.fill-star {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+}
+
+/* Tonal layers (design system elevation) */
+.tonal-layer-1 { background-color: #121212; }
+.tonal-layer-2 { background-color: #1e1e1e; }
+
+/* Sharp outlines (design system borders) */
+.sharp-outline { border: 1px solid #262626; }
+.sharp-outline-active { border: 1px solid #a4e6ff; }
+
+/* Navbar glassmorphism */
+#navbar {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Mobile menu transition */
+#mobile-menu {
+  transition: max-height 0.3s ease, opacity 0.2s ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+#mobile-menu.open {
+  max-height: 400px;
+  opacity: 1;
+}
+
+/* Button press effect */
+button:active, a:active {
+  transform: scale(0.97);
+}
+
+/* Selection color */
+::selection {
+  background-color: #00d1ff;
+  color: #003543;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #353534;
+  border: 1px solid #262626;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #454747;
+}
+
+/* Image loading placeholder */
+img {
+  background-color: #1c1b1b;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #00d1ff;
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Responsive tweaks for the bento gallery */
+@media (max-width: 768px) {
+  #galeria .grid-cols-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto !important;
+  }
+
+  #galeria .grid-cols-2 > div {
+    height: 300px;
+  }
+
+  #galeria .col-span-1.row-span-2 {
+    grid-row: span 1;
+  }
+}
+
+/* Ensure the hero CTA buttons look good on small screens */
+@media (max-width: 480px) {
+  .font-display-lg, .text-display-lg {
+    font-size: 2.5rem !important;
+  }
+}

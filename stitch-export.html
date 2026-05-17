@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#001f28",
+                        "on-surface": "#e5e2e1",
+                        "secondary": "#c6c6c7",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-primary": "#003543",
+                        "surface-container": "#201f1f",
+                        "on-surface-variant": "#bbc9cf",
+                        "tertiary-container": "#feb127",
+                        "on-background": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "surface": "#131313",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-container": "#b4b5b5",
+                        "on-error": "#690005",
+                        "primary": "#a4e6ff",
+                        "primary-container": "#00d1ff",
+                        "outline-variant": "#3c494e",
+                        "surface-container-highest": "#353534",
+                        "tertiary-fixed-dim": "#ffba49",
+                        "primary-fixed-dim": "#4cd6ff",
+                        "on-tertiary-fixed": "#291800",
+                        "primary-fixed": "#b7eaff",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#004e60",
+                        "surface-tint": "#4cd6ff",
+                        "outline": "#859399",
+                        "on-tertiary": "#442b00",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary": "#2f3131",
+                        "on-primary-container": "#00566a",
+                        "tertiary": "#ffd59c",
+                        "inverse-primary": "#00677f",
+                        "surface-container-high": "#2a2a2a",
+                        "background": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-variant": "#353534",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-container": "#6b4700",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffddb1",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#624000",
+                        "secondary-container": "#454747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0rem",
+                        "xl": "0rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "unit": "4px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Archivo Narrow"],
+                        "headline-lg": ["Archivo Narrow"],
+                        "body-md": ["Geist"],
+                        "headline-md": ["Archivo Narrow"],
+                        "body-lg": ["Geist"],
+                        "label-caps": ["Geist"],
+                        "display-lg": ["Archivo Narrow"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-layer-1 { background-color: #121212; }
+        .tonal-layer-2 { background-color: #1e1e1e; }
+        .sharp-outline { border: 1px solid #262626; }
+        .sharp-outline-active { border: 1px solid #a4e6ff; }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant">
+<div class="flex justify-between items-center max-w-max-width mx-auto px-margin-desktop py-4">
+<div class="font-headline-md text-headline-md font-bold text-primary uppercase tracking-tighter">
+                Punto Centro Fitness
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1" href="#">Sedes</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#">Clases</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#">Contacto</a>
+<button class="bg-primary text-on-primary-fixed px-6 py-2 font-bold uppercase hover:scale-95 transition-all duration-100">
+                    Inscribirme
+                </button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-20">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale-[0.3]" data-alt="A high-intensity workout scene in a dark, industrial-style gym. Athletic individuals are focused on diverse training activities, from kettlebell swings to heavy lifting. The lighting is dramatic and cinematic, featuring sharp highlights and deep shadows. The color palette is dominated by dark charcoal tones with vibrant electric blue lighting accents reflecting off polished equipment surfaces, creating a high-performance and sophisticated atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIdnvtXymx3wbxBz7L1Xg8nAg7XHtLb4zAE0gfWhUb1CaAans6YJM0ltJr3pMoGMtoEJ_hvcnQrDpoinC526bx3eWZocAjXzYveGBLagqQ-yZtU5PH2HnC_LZzm9m-KJL9GHAva1eUUJs1Ov3MRUWbwZthQ-J6xTYlKm5knsB7nLEYf2Npsc_17wB6nPlMgFXJ-MA75gG2O9Cxo9tRzWVLzNA4wBdW-elnNHKhDeXNLPKR27K79mEHjW_to57VunUpFbjrXtQt5ls"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] mb-4 block">POTENCIANDO TU MEJOR VERSIÓN</span>
+<h1 class="font-display-lg text-display-lg uppercase mb-6 leading-tight">
+                    Entrená en tu <span class="text-primary">mejor versión</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                    Elegí tu sede y empezá hoy. Equipamiento de última generación, entrenadores certificados y el mejor ambiente para alcanzar tus metas.
+                </p>
+<div class="flex flex-col md:flex-row gap-4">
+<button class="bg-primary text-on-primary-fixed px-8 py-4 font-bold uppercase tracking-wider hover:bg-primary-fixed-dim transition-colors">
+                        Ver sede Fray Bentos
+                    </button>
+<button class="bg-transparent border border-on-surface text-on-surface px-8 py-4 font-bold uppercase tracking-wider hover:bg-on-surface hover:text-background transition-colors">
+                        Ver sede Mercedes
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<!-- Location Split Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Fray Bentos -->
+<div class="tonal-layer-1 sharp-outline group overflow-hidden">
+<div class="h-80 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A wide-angle shot of a premium weightlifting area in a modern gym located in Fray Bentos. The space features sleek black rubber flooring, stainless steel racks, and high-end selectorized machines. Natural light filters through large windows, contrasting with the cool, dark interior finishes. The atmosphere is quiet, focused, and professional, maintaining a minimalist athletic aesthetic with charcoal and blue highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBexPswqM_ocnCObYv2sZbCmbqbpcKihea3TNhBW9gKsM3qARHhoFIQZSi8HMsCl0pUppyOO6F1-XQwjvGbth8HSb6Rpv4mroGybI73vLI_suKl_-wPRlzb5fozip14HnAHWpLOPqSdUrDBgj5zvijbrlkN8gAV0gOTbuawWlMJokRpyCT18u99eJgmBnt6uVop-HFyMkNsggYjiRmcJMC5U5qVhUOV4ly_wCSYsYfJNtCZyzq4afRFdT7Iufx-z2U6udikqbWasXc"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary-fixed px-4 py-1 font-bold uppercase text-xs">Sede Central</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md uppercase mb-2">Fray Bentos</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Nuestra sede principal equipada con lo último en biomecánica y espacios amplios para tu comodidad.</p>
+<div class="flex items-center gap-2 mb-8 text-on-surface-variant font-label-caps uppercase">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                            Av. 18 de Julio 1234, Fray Bentos
+                        </div>
+<button class="w-full border border-outline-variant py-4 font-bold uppercase tracking-widest hover:border-primary hover:text-primary transition-all">Ver más</button>
+</div>
+</div>
+<!-- Mercedes -->
+<div class="tonal-layer-1 sharp-outline group overflow-hidden">
+<div class="h-80 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Interior view of a modern fitness facility in Mercedes specializing in functional training. The scene shows a spacious turf area, wooden plyo boxes, and suspension trainers hanging from a steel rig. The design is clean and machined, utilizing a dark mode aesthetic with focused spotlights highlighting the training gear. Electric blue accents are subtly integrated into the architectural details and equipment branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDujNXHELkF0fMETvvux4SwK_uEBRv5Iq7oejXQUS5lDSMHUrAer6YBT6K8dXCsmjpvcPwnZt7uT37GV5zJXWVDtkNeCsN4Tr7VrDZOdAuJDitOgwMBCajFM38jZvYVtusuOt1_l9UYGAdjOT9MRvO_89Jkbl7tkL9JzjScOyrbK5sa4RvCIpQSmkAE5S5U535uNwhtk_nTS6UqAnWsR5AQF1tucFXqdsF6c9B2MrTTWUTwYFSgyzW4wd4QNi4TL71X6ASBmKzVFH0"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md uppercase mb-2">Mercedes</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Ubicada estratégicamente, Mercedes ofrece una experiencia boutique enfocada en resultados y comunidad.</p>
+<div class="flex items-center gap-2 mb-8 text-on-surface-variant font-label-caps uppercase">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                            Calle Artigas 567, Mercedes
+                        </div>
+<button class="w-full border border-outline-variant py-4 font-bold uppercase tracking-widest hover:border-primary hover:text-primary transition-all">Ver más</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features: Nuestros Servicios -->
+<section class="py-24 bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/2"></div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-16 text-center">Nuestros <span class="text-primary">Servicios</span></h2>
+<div class="grid md:grid-cols-3 gap-12">
+<!-- Musculación -->
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 mb-6 flex items-center justify-center border border-primary text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="fitness_center">fitness_center</span>
+</div>
+<h4 class="font-headline-md text-headline-md uppercase mb-4">Musculación</h4>
+<p class="text-on-surface-variant leading-relaxed">Equipamiento de primer nivel para hipertrofia, fuerza y mantenimiento físico en un entorno profesional.</p>
+</div>
+<!-- Clases funcionales -->
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 mb-6 flex items-center justify-center border border-primary text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="groups">groups</span>
+</div>
+<h4 class="font-headline-md text-headline-md uppercase mb-4">Clases funcionales</h4>
+<p class="text-on-surface-variant leading-relaxed">Dinámicas grupales de alta intensidad diseñadas para mejorar tu movilidad, resistencia y agilidad.</p>
+</div>
+<!-- Entrenamiento personalizado -->
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 mb-6 flex items-center justify-center border border-primary text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="monitoring">monitoring</span>
+</div>
+<h4 class="font-headline-md text-headline-md uppercase mb-4">Personalizado</h4>
+<p class="text-on-surface-variant leading-relaxed">Planes a medida con seguimiento constante para maximizar tu progreso y asegurar la técnica correcta.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery/Info: Sede Mercedes -->
+<section class="py-24 bg-surface">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col lg:flex-row gap-16">
+<!-- Info & Schedule -->
+<div class="lg:w-1/3">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-4">Sede <span class="text-primary">Mercedes</span></h2>
+<p class="text-on-surface-variant mb-8">Ubicada en el corazón de la ciudad, diseñada para quienes buscan eficiencia y modernidad en cada entrenamiento.</p>
+<div class="tonal-layer-1 sharp-outline p-6">
+<h5 class="font-label-caps text-label-caps text-primary uppercase mb-6 tracking-widest">Horarios de Clases</h5>
+<ul class="space-y-4 font-body-md">
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span>HIIT Training</span>
+<span class="text-primary">08:00 - 09:00</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span>Functional Core</span>
+<span class="text-primary">12:30 - 13:30</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span>Power Lifting</span>
+<span class="text-primary">18:00 - 19:30</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span>Yoga Recovery</span>
+<span class="text-primary">20:00 - 21:00</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Bento Gallery -->
+<div class="lg:w-2/3 grid grid-cols-2 grid-rows-2 gap-4 h-[600px]">
+<div class="col-span-1 row-span-2 overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="An expansive view of the cardio section at Punto Centro Fitness Mercedes. High-tech treadmills and rowers are aligned with precision under cool overhead linear lighting. The space is uncluttered, featuring dark gray walls and a polished finish that reflects the electric blue status lights of the machines. The overall mood is futuristic and energetic, emphasizing a data-driven fitness experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOI1PNLTC1aM-jRvnbcSCVzksjsvLmV1wg4TpHyRRIkDl4e8Vo2g4fLLrQHFWetrOcSU2Xdw2LSSqie906uqluaXr5CmJ4B0S4vn4IWgDHK9NTGKmH3GsHB6Yv2LgOj2GWRIiQFnOS5HBHeNID_yxLYRP-LyWd34tq_axosc-asMwzXIgWJPPl4aryYnP1E-qDApF6QZxoQTtFY0Sn0skvGPKhwwuJJSRWITG5KNGAesuQeWM-c6YNoqsn_I7TBVCiTdgxFngPSq4"/>
+</div>
+<div class="col-span-1 row-span-1 overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A close-up of heavy dumbbells resting on a specialized rack in a dark-themed gym. The focus is sharp on the metallic texture and weight markings of the equipment. Low-key lighting creates high contrast, with blue neon accents subtly illuminating the background. The aesthetic is clean, industrial, and focused on professional weight training quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB00L8lDC1n7MNhk7LQCT0hNMfiRBvl4rqtjcOtMKsrdErfCagW1l5YfBWpPY8fBJkXM3ZIjXa3X3qRpD6W2kbdi4fWC3xMUSuo9dPImbW-Hkgg4kdamCeG2Z_Tqiz8HD3l2ivkJ9DK1fv-VPKjooPPyf0LZgyassENXaKe8mjprGFA085_tPAQuE2IE-tBorHJ0CG3KlcKXX9w0RgkcJbWkoUtEApUiGOVnCe8aaddxP26Y8DGxHs2FA6SkV3dqP7NQ7gi9QG6igY"/>
+</div>
+<div class="col-span-1 row-span-1 overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Detail of a modern gym's locker room or refreshment area with a minimalist design. Features clean lines, dark matte finishes, and subtle warm lighting mixed with cool blue accents. The environment is sophisticated and orderly, reflecting a premium wellness center's commitment to hygiene and professional standards in a dark mode visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClYoFEc9ufbUXy8rLlSrWHLV0jxcOWnxpiMlwZMjRpajqhIqLyIiu0h2WD_hjlWUvJ8FcmPEgWmXgsLqxxKpdGEZIUeYVc_6S-6vxKZlr9ND9x_JOrWFwCNEq71mjPhaApgFalyjVpLgkZSKSTS7IcMaGfYPZ5UuKLDS52j6Ggl-XeAeqatyiT2jIns9OZuZFKamIIL5a3nnUjC3llYaGC4iSSjSSBMEZRWQONP2WQzQbteGgEDEBdP-6bCrjr5HG3LC1jJz_FYmw"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-4">Comunidad <span class="text-primary">Punto Centro</span></h2>
+<p class="text-on-surface-variant">Lo que dicen nuestros miembros sobre su proceso de transformación.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="tonal-layer-1 p-8 border-l-4 border-primary">
+<div class="flex gap-1 text-tertiary-fixed-dim mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic mb-8 text-on-surface">"Las instalaciones son increíbles y el ambiente te motiva a darlo todo cada día. Los profes de Mercedes son excelentes."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a smiling young woman with athletic attire in a modern gym setting. High-quality lighting and dark aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYRnEQOoMMZoNhJD4fUW-vqPrJ8H4RMECxc4du1uyzjFKBRsDGKeh8jzQmc9HwbaE1qXNtWycbdQTUTixOOmnt82BX-3ZipL__AWFm9XQuExDQUR4_wxs7S6zPF4atpPLT1HEtxiCFGBG8qAgY1p3ojyyl_t3RhTTU8feC2IXArYYfbsPgirq2Jnai1lSK-QtnsTAK08hLmMQSjo0LbOYRuzKYYBjGQgp5ERpNmXjAu1Yp0L77YOmVF3Wvx7gq2ESDwNauOzI7v4Y"/>
+</div>
+<div>
+<div class="font-bold uppercase text-sm">Carla Mendez</div>
+<div class="text-xs text-on-surface-variant font-label-caps">Miembro Sede Mercedes</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="tonal-layer-1 p-8 border-l-4 border-primary">
+<div class="flex gap-1 text-tertiary-fixed-dim mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic mb-8 text-on-surface">"En Fray Bentos encontré el espacio perfecto para mi entrenamiento de fuerza. Equipamiento de primer nivel."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a fit man in a gym, confident expression. Professional studio-quality fitness photography in a dark mode style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIducaT39aacbFUDmQ4BBkYSCyPlraYncEgQ2wA9QlJstJk1eAjiLp1ZbPIK-WG5019A5KZJOAA8zLdLCBB6OHe7zMzL2FRRYz7Umjlje9RAVyIlx9xm8ybi16ej1sL-LHkd5AyPApY4vVJmkkpoNWY-6SNk9vjzX10I9R-giVJBF_nlUCFXmaqmhtyKo-pNldIti5JIWjoIq50sf5ZKoUX1cxPWa2vaOIgPiFgGsNtv8mQ1eMgmznRcRYQzefDp4aTRL89M3xLqA"/>
+</div>
+<div>
+<div class="font-bold uppercase text-sm">Ricardo Sosa</div>
+<div class="text-xs text-on-surface-variant font-label-caps">Miembro Sede Fray Bentos</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="tonal-layer-1 p-8 border-l-4 border-primary">
+<div class="flex gap-1 text-tertiary-fixed-dim mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic mb-8 text-on-surface">"Lo mejor de Punto Centro es la comunidad. Me ayudaron a bajar 10kg en 4 meses con el plan personalizado."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a woman after a workout, glow of sweat, modern gym background with soft blue lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm4APu7TTBuAgfdLOHDdbZjaVzDFrB9DXS0CzdE5ETQqMYM6sLRJmbCAnypw2kLz_uIOS4OXxbiUH2oMkQoNtQzCz6cWfHmaBBA6o69tlBDyoBlyGZN805Zc3tdNmQfT6iiTXnR4wAaqC_Buqrtt2nf-QN3rvhP5Qectff_ocHDFgFs3q_jR87Q0oQ34v5nFEJGv5P2CbooLIook188P_vR7Sc5sc6su3YT5zg0i-f9Lk9cHOuBKhphE16tRdg2OXcFJT0HvmwOR4"/>
+</div>
+<div>
+<div class="font-bold uppercase text-sm">Mariana Ruiz</div>
+<div class="text-xs text-on-surface-variant font-label-caps">Entrenamiento Personalizado</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary-container/10"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/20 blur-[100px] rounded-full"></div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
+<h2 class="font-display-lg text-display-lg uppercase mb-8">Sumate hoy a <br/><span class="text-primary">Punto Centro</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl mx-auto">No esperes al lunes. Tu transformación empieza con el primer paso hoy mismo en cualquiera de nuestras sedes.</p>
+<button class="bg-primary text-on-primary-fixed px-12 py-5 font-extrabold uppercase tracking-[0.2em] text-lg hover:scale-105 transition-transform">
+                Empezar ahora
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-outline-variant bg-surface-container-lowest">
+<div class="max-w-max-width mx-auto px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-headline-md text-headline-md font-bold text-primary uppercase">
+                Punto Centro Fitness
+            </div>
+<div class="flex flex-wrap justify-center gap-8 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Sedes</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Clases</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Contacto</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidad</a>
+</div>
+<div class="text-on-surface-variant font-body-md text-sm text-center md:text-right">
+                © 2024 Punto Centro Fitness. Potenciando tu mejor versión.
+            </div>
+</div>
+</footer>
+</body></html>
